@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navContainer">
+            <div class="navLogo">
+                <a href="">Powered BY</a>
+                <img src="./assets/navLogo.svg" alt="">
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="">About Me</a></li>
+                    <li><a href="">Sass Functions</a></li>
+                    <li><a href="../end/end.html">End</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="aboutMe">
+        <div class="aboutmeContainer">
+            <div class="slogan">
+                <h1 id="typingText">_</h1>
+            </div>
+            <div class="imgContainer">
+                <img src="./assets/port.jpg" alt="">
+            </div>
+        </div>
+        <div class="myStack">
+            <div class="stackTitle">
+                <h1>MY STACK</h1>
+
+            </div>
+            <div class="skills" <img src="./assets/./html-124-svgrepo-com.svg" alt="">
+                <img src="./assets/./css3-02-svgrepo-com.svg" alt="">
+                <img src="./assets/java-script-logo-svgrepo-com.svg" alt="">
+                <img src="../src/assets/react-svgrepo-com.svg" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <section class="sassInfo">
+        <div class="sassTitle">
+            <h1>Sass/Scss Functions</h1>
+            <p>SCSS-dəki funksiyalar parametrləri qəbul edə, hesablamalar apara və nəticə qaytara bilən kod
+                parçalarıdır. Onlar kodun təkrar istifadəsinə imkan verir və daha davamlı üslubu təşviq edir.
+                Funksiyalar kodun təkrarlanmasının qarşısını alaraq onu daha oxunaqlı və davamlı edir.
+
+                Çeviklik və Parametrlər: Funksiyalar parametrləri qəbul edə bilər, onları müxtəlif kontekstlərə çevik və
+                uyğunlaşdırır.
+
+                Modulluq: Funksiyalardan istifadə modul və strukturlaşdırılmış kodu təşviq edir.
+            </p>
+
+        </div>
+        <div class="syntax">
+            <h1>Code</h1>
+            <div class="codeSource1">
+                <p>İlk baxışdan funksiyalar mixinlərə çox bənzəyir. Parametr qəbul etmə kimi oxşar funksiyaları olsa
+                    belə, funksiyalar yanlız bizə return olaraq yanlız və yanlız dəyər qaytarır. Hansıki o dəyəri
+                    çevirmənin istənilən yerində istifadə edə bilərik.</p>
+                <div class="code">
+                    <pre>
+@function calculateWidth($width, $margin) {
+    @return $width + $margin;
+}
+      
+.example {
+    width: calculateWidth(100px, 20px);
+}       
+                                            </pre>
+                    <p>
+                        Gəlin qradiyent yaratmaq üçün funksiyalardan istifadə nümunəsinə baxaq:
+                    </p>
+                    <p>
+                        Bu nümunə, generateGradient funksiyasının kodunuzu necə təmizlədiyini və gələcəkdə dəyişiklik
+                        etməyi asanlaşdırdığını nümayiş etdirir.
+                    </p>
+                    <pre>
+    @function generateGradient($color1, $color2) {
+        @return linear-gradient(to right, $color1, $color2);
+      }
+      
+      .header {
+        background: generateGradient(#3498db, #2ecc71);
+      }
+      
+</pre>
+                    <p>
+                        Nəticə olaraq, SCSS-dəki funksiyalar davamlı, çevik və səmərəli üslub kodu yaratmaq üçün güclü
+                        bir alət təmin edir. Onların istifadəsi tərtibatçılara inkişaf vaxtını azaltmağa, kodun
+                        oxunuşunu artırmağa və layihənin modulluğunu təmin etməyə imkan verir
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <script>
+        var words = [" Hello My Name Is Toghrul", " And This Is My Presentation about Sass Functions"];
+        var currentWordIndex = 0;
+        var typingElement = document.getElementById("typingText");
+        var letterIndex = 0;
+
+        function typeText() {
+            if (currentWordIndex < words.length) {
+                var currentWord = words[currentWordIndex];
+                if (letterIndex < currentWord.length) {
+                    typingElement.innerHTML += currentWord.charAt(letterIndex);
+                    letterIndex++;
+                    setTimeout(typeText, 100);
+                } else {
+                    setTimeout(function () {
+                        // Delay before starting to delete the word
+                        deleteText(currentWord.length);
+                    }, 1000); // Wait for 1 second before typing the next word
+                }
+            } else {
+                // If all words are typed, reset and repeat
+                currentWordIndex = 0;
+                setTimeout(typeText, 1000); // Wait for 1 second before starting over
+            }
+        }
+
+        function deleteText(length) {
+            if (length > 0) {
+                typingElement.innerHTML = typingElement.innerHTML.slice(0, -1);
+                setTimeout(function () {
+                    deleteText(length - 1);
+                }, 50);
+            } else {
+                currentWordIndex++;
+                letterIndex = 0;
+                setTimeout(typeText, 500); // Wait for 0.5 seconds before typing the next word
+            }
+        }
+
+        // Start the typing effect
+        typeText();
+    </script>
+
+
+</body>
+
+</html>

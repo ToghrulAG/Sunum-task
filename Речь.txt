@@ -1,0 +1,3 @@
+Sass/scss-deki mixinler funksiyalar bir-birlerine cox benzeyirler. Meselen : Ikisininde her hansi bir deyisken (parametr qebul etme men oz daxilinde istifade etmeyi var ) Mixinin daxilinde biz bir nece dene style yazib onu her hansi bir komponentin daxilinde istifade ede bilerik. Funksiya bize bize hesablanmis bir deyeri return edir 
+
+Funksiyalar ise bize, math operasiyalari yerine yetirmeye komek edir

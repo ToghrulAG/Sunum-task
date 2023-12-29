@@ -1,0 +1,18 @@
+//Padding
+
+@mixin defPagePadding {
+    padding: 10px 50px 10px 50px;
+}
+
+//Flex layout
+
+@mixin flex_xy_center_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex_x_between_y_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

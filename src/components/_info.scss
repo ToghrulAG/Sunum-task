@@ -1,0 +1,73 @@
+@import '../scss/mixins';
+
+.sassInfo {
+    height: 100vh;
+   background-color: rgb(242, 242, 242);
+    padding-top: 50px;
+    padding: 50px 20px 50px 20px;
+
+    .sassTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            font-size: 40px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        p {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 19px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    }
+
+    .syntax {
+        padding: 50px 0px 20px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            font-size: 40px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .codeSource1 {
+            padding-top: 20px;
+            text-align: center;
+
+            p {
+                text-align: center;
+     
+                font-size: 19px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            .code {
+                padding-top: 20px;
+
+                pre {
+                    padding: 30px 0px 20px 0px;
+                    font-size: 20px;
+                    background-color: rgb(0, 0, 0);
+                    color: rgb(84, 197, 84);
+                }
+                p {
+                    padding: 20px 0px 20px 0px;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                }
+
+
+            }
+
+
+        }
+    }
+
+}
+
